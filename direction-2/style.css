@@ -1,39 +1,84 @@
 :root {
-	--type-xl:calc(var(--type-base) * 14);
+	--type-xl:calc(var(--type-base) * 10);
 	--type-L:calc(var(--type-base) * 5);
 	--type-M:calc(var(--type-base) * 3);
 	--type-base:1rem;
 
-	--color-fg: black;
-	--color-bg: white;
+	--color-bg: black;
+	--color-fg: white;
 
-	--space-S:calc(var(--space-M)*0.3);
+	--space-S:calc(var(--space-M)*0.4);
 	--space-M: 5rem;
 	--space-L:calc(var(--space-M)*3);
 	--space-XL:calc(var(--space-M)*3);
 
-	--display: "BBH Bogle", sans-serif;
-	--base:
+	--display: "Redaction", serif;
+	--dissolve:"Redaction 50", serif;
+	--base:"Bitter", serif;
 }
 
 /*--------FONTS----------------*/
 
-.bbh-bogle-regular {
-  font-family: "BBH Bogle", sans-serif;
+.redaction-50-regular {
+  font-family: "Redaction 50", serif;
   font-weight: 400;
   font-style: normal;
 }
 
+.redaction-50-bold {
+  font-family: "Redaction 50", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-50-regular-italic {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-regular {
+  font-family: "Redaction", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-bold {
+  font-family: "Redaction", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-regular-italic {
+  font-family: "Redaction", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.bitter-<uniquifier> {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--base);
+	background: var(--color-bg);
+	color: var(--color-fg);
 }
 
 mark{
-	border: blue, 0.1rem, solid;
+	border: orangered, 0.1rem, solid;
 }
 
 i{
 font-style: italic;
+font-family: var(--dissolve);
+color: pink;
 }
 
 article {
@@ -43,7 +88,10 @@ font-size: var(--type-base);
 	p{
 		margin-block: var(--space-S);
 		line-height: var(--space-S);
-	}
+  column-count: 2;
+  column-gap: 2rem;
+  line-height: var(--space-S);
+}
 }
 
 h1{
@@ -54,6 +102,7 @@ font-family:var(--display);
 text-align: left;
 border: black, 0.2rem, solid;
 word-spacing: var(--space-S);
+font-weight: 700;
 }
 
 nav{
@@ -62,19 +111,19 @@ nav{
 	border:black, 0.05rem, solid;
 
 	:hover{
-		background: blue;
+		background: orangered;
 		color:white;
 	}
 }
 
 a{
-	color: blue;
+	color: pink;
 	text-decoration: underline;
 }
 
 .top-line {
-background-color: black;
-color:white;
+background-color: pink;
+color:var(--color-bg);
 font-size:var(--type-base);
 padding-block: var(--space-S);
 padding-inline: var(--space-S);
@@ -86,17 +135,15 @@ p{
 }
 
 blockquote{
-	text-align: right;
+	text-align: center;
 	font-family: var(--display);
 	font-size: var(--type-M);
 	padding-block: var(--space-M);
-	word-spacing: var(--space-S);
-	text-decoration: underline;
-	text-decoration-color: blue;
 }
 
 em{
-	color: blue;
+	font-family: var(--dissolve);
 	font-style: italic;
+	color: orangered;
 }
 
