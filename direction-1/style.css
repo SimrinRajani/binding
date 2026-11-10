@@ -1,20 +1,20 @@
 
 :root {
-	--type-xl:calc(var(--type-base) * 14);
-	--type-L:calc(var(--type-base) * 5);
-	--type-M:calc(var(--type-base) * 3);
+	--type-xl:calc(var(--type-base) * 6);
+	--type-L:calc(var(--type-base) * 4);
+	--type-M:calc(var(--type-base) * 2);
 	--type-base:1rem;
 
 	--color-fg: black;
 	--color-bg: white;
 
 	--space-S:calc(var(--space-M)*0.3);
-	--space-M: 5rem;
-	--space-L:calc(var(--space-M)*3);
-	--space-XL:calc(var(--space-M)*3);
+	--space-M: 1.5rem;
+	--space-L:calc(var(--space-M)*2);
+	--space-XL:calc(var(--space-M)*5);
 
 	--display: "BBH Bogle", sans-serif;
-	--base:
+	--base: arial, helvetica, sans-serif;
 }
 
 /*--------FONTS----------------*/
@@ -26,11 +26,11 @@
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--base);
 }
 
 mark{
-	border: blue, 0.1rem, solid;
+	border: blue 0.1rem solid;
 }
 
 i{
@@ -38,29 +38,32 @@ font-style: italic;
 }
 
 article {
-margin-inline: var(--space-L);
+margin-block-start: var(--space-XL);
+margin-inline: var(--space-M);
 font-size: var(--type-base);
 
 	p{
-		margin-block: var(--space-S);
-		line-height: var(--space-S);
+		line-height: calc(var(--space-M)*1.4);
+		margin-block: var(--space-L);
 	}
+}
+hgroup{
+	border-top: black 0.2rem solid;
+	border-bottom: black 0.2rem solid;
 }
 
 h1{
 font-size: var(--type-xl);
-padding-block: var(--space-L);
+padding-block: var(--space-XL);
 padding-inline: var(--space-S);
 font-family:var(--display);
 text-align: center;
-border: black, 0.2rem, solid;
 word-spacing: var(--space-S);
 }
 
 nav{
 	text-align: center;
-	padding-block: var(--space-S);
-	border:black, 0.05rem, solid;
+	padding-block: var(--space-M);
 
 	:hover{
 		background: blue;
@@ -77,8 +80,8 @@ a{
 background-color: black;
 color:white;
 font-size:var(--type-base);
-padding-block: var(--space-S);
-padding-inline: var(--space-S);
+padding-block: var(--space-M);
+padding-inline: var(--space-M);
 p{
 	margin-block: var(--space-S);
 	flex-direction: row;
@@ -90,11 +93,17 @@ blockquote{
 	text-align: right;
 	font-family: var(--display);
 	font-size: var(--type-M);
-	padding-block: var(--space-M);
+	padding-block: var(--space-XL);
 	word-spacing: var(--space-S);
 	text-decoration: underline;
 	text-decoration-color: blue;
+	line-height:var(--space-L);
 }
+
+blockquote:last-of-type{
+		font-size: var(--type-L);
+		line-height: var(--space-XL);
+	}
 
 em{
 	color: blue;
