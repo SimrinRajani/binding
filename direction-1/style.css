@@ -110,6 +110,23 @@ em{
 	font-style: italic;
 }
 
+/* -----------------desktop--------------------*/
 
+@media (min-width: 48rem) {
+	:root {
+		--type-base: 1rem;
+		--type-xl: clamp(4rem, 13vw, 14rem);
+		--type-L: clamp(2.5rem, 6vw, 5rem);
+		--type-M: clamp(1.5rem, 3vw, 3rem);
+
+		--space-M: 2rem;
+		--space-L: calc(var(--space-M) * 3);
+		--space-XL: calc(var(--space-M) * 3);
+	}
+
+	article {
+		margin-inline: var(--space-L);
+	}
+}
 
 
