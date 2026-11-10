@@ -110,6 +110,12 @@ em{
 	font-style: italic;
 }
 
+footer{
+	border-top: black 0.2rem solid;
+	padding-block: var(--space-L);
+	padding-inline: var(--space-M);
+}
+
 /* -----------------desktop--------------------*/
 
 @media (min-width: 48rem) {
