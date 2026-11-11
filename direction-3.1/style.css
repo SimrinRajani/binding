@@ -124,6 +124,10 @@ blockquote{
 	color:black;
 	background: white;
 	border: black 5rem solid;
+
+	:hover{
+font-family: var(--form-display);
+	}
 }
 
 blockquote:nth-of-type(even){
