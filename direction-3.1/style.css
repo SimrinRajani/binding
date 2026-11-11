@@ -1,0 +1,172 @@
+
+:root {
+	--type-xl:calc(var(--type-base) * 6);
+	--type-L:calc(var(--type-base) * 4);
+	--type-M:calc(var(--type-base) * 2);
+	--type-base:1rem;
+
+	--color-fg: white;
+	--color-bg: black;
+
+	--space-S:calc(var(--space-M)*0.3);
+	--space-M: 1.5rem;
+	--space-L:calc(var(--space-M)*2);
+	--space-XL:calc(var(--space-M)*5);
+
+	--function-display:"Archivo black", sans-serif;
+	--form-display:"Domine", serif;
+	--base:"Open Sans", sans-serif;
+}
+
+/*-----------FONTS-------------*/
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// <weight>: Use a value from 400 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+.domine-<uniquifier> {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <weight>: Use a value from 200 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+.stack-sans-notch-<uniquifier> {
+  font-family: "Stack Sans Notch", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <weight>: Use a value from 300 to 800
+// <uniquifier>: Use a unique and descriptive class name
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+	font-family: var(--base);
+	background: var(--color-bg);
+	color: var(--color-fg);
+}
+
+article {
+margin-block-start: var(--space-XL);
+margin-inline: var(--space-M);
+font-size: var(--type-base);
+
+	p{
+		line-height: calc(var(--space-M)*1.4);
+		margin-block: var(--space-L);
+	}
+}
+
+hgroup{
+}
+
+h1{
+font-size: var(--type-xl);
+padding-block: var(--space-XL);
+padding-inline: var(--space-L);
+font-family:var(--function-display);
+word-spacing: var(--space-S);
+color:linear-gradient(30deg, white, black);
+}
+
+nav{
+	text-align: center;
+	padding-block: var(--space-M);
+
+	:hover{
+		background: white;
+		color:black;
+	}
+}
+
+.top-line {
+background: linear-gradient(90deg, black, white);
+color:white;
+font-size:var(--type-base);
+padding-block: var(--space-M);
+padding-inline: var(--space-M);
+p{
+	margin-block: var(--space-S);
+	flex-direction: row;
+	display: inline;
+}
+}
+
+blockquote{
+	text-align: right;
+	font-family: var(--function-display);
+	font-size: var(--type-M);
+	padding-block: var(--space-XL);
+	padding-inline: var(--space-M);
+	word-spacing: var(--space-S);
+	text-decoration: underline;
+	line-height:var(--space-L);
+	background: linear-gradient(30deg, white, black);
+}
+
+blockquote:nth-of-type(even){
+background: linear-gradient(80deg, black, white);
+text-align: left;
+}
+
+footer{
+	padding-block: var(--space-L);
+	padding-inline: var(--space-M);
+}
+
+a{
+	text-decoration: underline;
+}
+
+em{
+	font-family:var(--form-display);
+	font-style: italic;
+}
+
+mark{
+}
+
+i{
+font-style: italic;
+}
+
+
+/* -----------------desktop--------------------*/
+
+@media (min-width: 48rem) {
+	:root {
+		--type-base: 1rem;
+		--type-xl: clamp(4rem, 13vw, 14rem);
+		--type-L: clamp(2.5rem, 6vw, 5rem);
+		--type-M: clamp(1.5rem, 3vw, 3rem);
+
+		--space-M: 2rem;
+		--space-L: calc(var(--space-M) * 3);
+		--space-XL: calc(var(--space-M) * 3);
+	}
+
+	article {
+		margin-inline: var(--space-L);
+	}
+}
+
+
+
