@@ -58,6 +58,7 @@
     "wdth" 100;
 }
 
+
 body {
 	font-family: var(--base);
 	background:linear-gradient(90deg, #000 50%, #fff 50%);
@@ -69,9 +70,12 @@ margin-block-start: var(--space-XL);
 margin-inline: var(--space-M);
 font-size: var(--type-base);
 
-	p{
+
+p {
 		line-height: calc(var(--space-M)*1.4);
 		margin-block: var(--space-L);
+		color:white;
+		mix-blend-mode: difference;
 	}
 }
 
@@ -84,7 +88,7 @@ padding-block: var(--space-XL);
 padding-inline: var(--space-L);
 font-family:var(--function-display);
 word-spacing: var(--space-S);
-color:linear-gradient(30deg, white, black);
+mix-blend-mode: difference;
 }
 
 nav{
@@ -98,11 +102,10 @@ nav{
 }
 
 .top-line {
-background: linear-gradient(90deg, black, white);
-color:white;
 font-size:var(--type-base);
 padding-block: var(--space-M);
 padding-inline: var(--space-M);
+mix-blend-mode: difference;
 p{
 	margin-block: var(--space-S);
 	flex-direction: row;
@@ -111,20 +114,22 @@ p{
 }
 
 blockquote{
-	text-align: right;
+	text-align: center;
 	font-family: var(--function-display);
 	font-size: var(--type-M);
-	padding-block: var(--space-XL);
-	padding-inline: var(--space-M);
+	padding-block: var(--space-L);
+	padding-inline: var(--space-L);
 	word-spacing: var(--space-S);
-	text-decoration: underline;
-	line-height:var(--space-L);
-	background: linear-gradient(30deg, white, black);
+	line-height:4rem;
+	color:black;
+	background: white;
+	border: black 5rem solid;
 }
 
 blockquote:nth-of-type(even){
-background: linear-gradient(80deg, black, white);
-text-align: left;
+color:white;
+	background: black;
+	border: white 5rem solid;
 }
 
 footer{
@@ -164,9 +169,14 @@ font-style: italic;
 	}
 
 	article {
-		margin-inline: var(--space-L);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: calc(var(--space-M) * 2);
+		align-items: start;
 	}
-}
 
+	blockquote {
+		grid-column: 1 / -1;
+}
 
 
