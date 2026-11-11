@@ -1,8 +1,8 @@
 
 :root {
-	--type-xl:calc(var(--type-base) * 6);
-	--type-L:calc(var(--type-base) * 4);
-	--type-M:calc(var(--type-base) * 2);
+	--type-xl:calc(var(--type-base) * 4);
+	--type-L:calc(var(--type-base) * 2);
+	--type-M:calc(var(--type-base) * 1.5);
 	--type-base:1rem;
 
 	--color-fg: white;
@@ -154,7 +154,7 @@ font-style: italic;
 @media (min-width: 48rem) {
 	:root {
 		--type-base: 1rem;
-		--type-xl: clamp(4rem, 13vw, 14rem);
+		--type-xl: clamp(4rem, 12vw, 14rem);
 		--type-L: clamp(2.5rem, 6vw, 5rem);
 		--type-M: clamp(1.5rem, 3vw, 3rem);
 

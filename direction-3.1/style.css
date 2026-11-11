@@ -60,7 +60,7 @@
 
 body {
 	font-family: var(--base);
-	background: var(--color-bg);
+	background:linear-gradient(90deg, #000 50%, #fff 50%);
 	color: var(--color-fg);
 }
 
