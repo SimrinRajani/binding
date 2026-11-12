@@ -7,6 +7,8 @@
 
 	--color-fg: black;
 	--color-bg: white;
+	--color-accent-1: #5B2BEE;
+	--color-accent-2:#CDF564;
 
 	--space-S:calc(var(--space-M)*0.3);
 	--space-M: 1.5rem;
@@ -30,7 +32,7 @@ body {
 }
 
 mark{
-	border: blue 0.1rem solid;
+	background: var(--color-accent-2);
 }
 
 i{
@@ -48,8 +50,7 @@ font-size: var(--type-base);
 	}
 }
 hgroup{
-	border-top: black 0.2rem solid;
-	border-bottom: black 0.2rem solid;
+
 }
 
 h1{
@@ -59,6 +60,8 @@ padding-inline: var(--space-S);
 font-family:var(--display);
 text-align: center;
 word-spacing: var(--space-S);
+background: var(--color-accent-1);
+color: var(--color-bg);
 }
 
 nav{
@@ -71,14 +74,18 @@ nav{
 	}
 }
 
+h1,
+blockquote {
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  border: #CDF564 2rem solid;
+}
+
 a{
-	color: blue;
+	color: var(--color-accent-1);
 	text-decoration: underline;
 }
 
 .top-line {
-background-color: black;
-color:white;
 font-size:var(--type-base);
 padding-block: var(--space-M);
 padding-inline: var(--space-M);
@@ -96,8 +103,10 @@ blockquote{
 	padding-block: var(--space-XL);
 	word-spacing: var(--space-S);
 	text-decoration: underline;
-	text-decoration-color: blue;
+	text-decoration-color: var(--color-accent-2);
 	line-height:var(--space-L);
+	background: #5B2BEE;
+	color: var(--color-bg);
 }
 
 blockquote:last-of-type{
@@ -106,12 +115,12 @@ blockquote:last-of-type{
 	}
 
 em{
-	color: blue;
+	color: var(--color-accent-2);
 	font-style: italic;
 }
 
 footer{
-	border-top: black 0.2rem solid;
+
 	padding-block: var(--space-L);
 	padding-inline: var(--space-M);
 }

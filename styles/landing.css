@@ -10,13 +10,14 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: var(--type-L);
+	font-size: var(--type-M);
+
 }
 
 h1{
- font-size: var(--type-xl);
+ font-size: var(--type-L);
  font-weight: bolder ;
- padding-block: 6rem;
+ padding-inline:1rem;
 }
 
 header,main,footer{
