@@ -1,7 +1,7 @@
 
 :root {
-	--type-xl:calc(var(--type-M) * 10);
-	--type-L: calc(var(--type-M) * 5);
+	--type-xl:calc(var(--type-M) * 8);
+	--type-L: calc(var(--type-M) * 3);
 	--type-M: 1rem;
 
 	--color-fg: black;
@@ -10,10 +10,17 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: var(--type-L);
 }
 
 h1{
  font-size: var(--type-xl);
+ font-weight: bolder ;
+ padding-block: 6rem;
+}
+
+header,main,footer{
+	padding-inline:3rem;
 }
 
 a{
@@ -24,4 +31,6 @@ a{
 background-color: black;
 color:white;
 font-size:var(--type-M);
+padding-block: 4rem;
+padding-inline: 2rem;
 }

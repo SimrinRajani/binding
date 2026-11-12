@@ -113,7 +113,6 @@ blockquote{
 	font-size: var(--type-M);
 	padding-block: var(--space-L);
 	padding-inline: var(--space-L);
-	word-spacing: var(--space-S);
 	line-height:2rem;
 	color:white;
 	background: black;
