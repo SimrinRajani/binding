@@ -1,36 +1,37 @@
 
 :root {
-	--type-xl:calc(var(--type-base) * 6);
+	--type-xxl:calc(var(--type-base)*16);
+	--type-xl:calc(var(--type-base) * 5);
 	--type-L:calc(var(--type-base) * 4);
 	--type-M:calc(var(--type-base) * 2);
 	--type-base:1rem;
 
-	--color-fg: black;
-	--color-bg: white;
+	--color-fg: #3C0016;
+	--color-bg: #D1C0A5;
+	--color-accent: #F92424;
 
 	--space-S:calc(var(--space-M)*0.3);
 	--space-M: 1.5rem;
 	--space-L:calc(var(--space-M)*2);
 	--space-XL:calc(var(--space-M)*5);
 
-	--display: "BBH Bogle", sans-serif;
-	--base: arial, helvetica, sans-serif;
+	--display:"Inter Tight",sans-serif;
+	--base:"Inter Tight",sans-serif;
+	--data:"DM Mono", monospace;
 }
 
 /*--------FONTS----------------*/
 
-.bbh-bogle-regular {
-  font-family: "BBH Bogle", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 body {
 	font-family: var(--base);
+	background: var(--color-bg);
+	color: var(--color-fg);
 }
 
 mark{
-	border: blue 0.1rem solid;
+	background-color: var(--color-fg);
+	color: var(--color-bg);
 }
 
 i{
@@ -47,9 +48,10 @@ font-size: var(--type-base);
 		margin-block: var(--space-L);
 	}
 }
+
 hgroup{
-	border-top: black 0.2rem solid;
-	border-bottom: black 0.2rem solid;
+	position: relative;
+  z-index: 1;
 }
 
 h1{
@@ -59,6 +61,17 @@ padding-inline: var(--space-S);
 font-family:var(--display);
 text-align: center;
 word-spacing: var(--space-S);
+font-weight: bolder;
+}
+
+.bg-title{
+font-size:var(--type-xxl);
+opacity: 30%;
+font-weight: 900;
+position: absolute;
+  inset-inline: 0;
+  z-index: 0;
+  text-align: center;
 }
 
 nav{
@@ -66,24 +79,40 @@ nav{
 	padding-block: var(--space-M);
 
 	:hover{
-		background: blue;
-		color:white;
 	}
 }
 
 a{
-	color: blue;
+	color: var(--color-fg);
 	text-decoration: underline;
+	text-decoration-color:var(--color-accent);
+	font-family: var(--data);
+	text-transform: uppercase;
+
 }
 
+&::before {
+		content: "(Q" counter(quote) ") Rock, 2015";
+		display: block;
+		width: max-content;
+		margin: 0 0 var(--space-S) auto;
+		text-indent: 0;
+		font-family: var(--data);
+		font-size: 0.7rem;
+		font-weight: 400;
+		letter-spacing: 0;
+		color: var(--color-accent);
+	}
+
 .top-line {
-background-color: black;
-color:white;
 font-size:var(--type-base);
 padding-block: var(--space-M);
 padding-inline: var(--space-M);
+font-family: var(--data);
+font-weight:900;
+text-transform: uppercase;
 p{
-	margin-block: var(--space-S);
+	margin-inline: var(--space-L);
 	flex-direction: row;
 	display: inline;
 }
@@ -95,9 +124,8 @@ blockquote{
 	font-size: var(--type-M);
 	padding-block: var(--space-XL);
 	word-spacing: var(--space-S);
-	text-decoration: underline;
-	text-decoration-color: blue;
 	line-height:var(--space-L);
+	font-weight: 700;
 }
 
 blockquote:last-of-type{
@@ -106,12 +134,12 @@ blockquote:last-of-type{
 	}
 
 em{
-	color: blue;
 	font-style: italic;
 }
 
+
+
 footer{
-	border-top: black 0.2rem solid;
 	padding-block: var(--space-L);
 	padding-inline: var(--space-M);
 }
