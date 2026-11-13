@@ -2,55 +2,69 @@
 <html>
 	<head>
 		<title>Binding</title>
-		<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-		<link href="styles/reset.css" rel="stylesheet">
-		<link href="styles/common.css" rel="stylesheet">
-		<link href="styles/landing.css" rel="stylesheet">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+		<style>
+			@import 'styles/reset.css' layer(reset);
+			@import 'styles/common.css' layer(common);
+			@import 'styles/landing.css' layer(landing);
+		</style>
 	</head>
-	<body>
-		<!--this is the top line bar-->
-		<section class="top-line">
-				<p>Type & Interaction 2026-2027</p>
-				<time datetime="2026-10-01"> BINDING | PROJECT 3 SEM 1</time>
-				<!-- for more info on time/date element look here: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time -->
-			</section>
-		<header>
-			<!--main site title-->
-			<hgroup>
-				<h1>FORM VS</h1>
-				<h1>FUNCTION</h1>
-				<p>Collection of articles</p>
-			</hgroup>
 
-			<!--navigation buttons/links-->
+	<body>
+		<header>
+			<!--LOGO AND NAV-->
+			<a href="./">F/F</a>
+
 			<nav>
 				<ul>
-					<li>
-						<a href="direction-1">SKETCH 1</a>
-					</li>
-					<li>
-						<a href="direction-2">SKETCH 2</a>
-					</li>
-					<li>
-						<a href="direction-3/">SKETCH 3</a>
-					</li>
-					<li>
-						<a href="direction-4/">SKETCH 4</a>
-					</li>
-					<li>
-						<a href="direction-5/">SKETCH 5</a>
-					</li>
+					<li><a href="article-1/">Tension</a></li>
+					<li><a href="article-2/">Responsibility</a></li>
+					<li><a href="article-3/">Possibility</a></li>
 				</ul>
 			</nav>
-		</header>
-		<main>
 
-			<p>Intro</p>
+			<img src="images/form-function.png" alt="">
+
+			<h1><span>Form</span><span>VS</span><span>Function</span></h1>
+		</header>
+
+		<main>
+			<h2>Intro</h2>
+			<p>This site explores the relationship between visual expression and functionality in design, and the space where the two meet. A design can be visually engaging, expressive and immersive, but it also needs to communicate clearly and serve the people using it. How do we create experiences that capture attention without sacrificing usability? And how do we make something functional without losing its personality?</p>
+			<p>The three articles brought together here approach this relationship from different perspectives. In *"Hooked on a Feeling,"* Michael Rock explores how visual decisions shape the way people experience and interpret design, raising questions about the balance between aesthetics, emotion and practical purpose. Mitchell Kapor's *"A Software Design Manifesto"* shifts the focus toward usability and the responsibility designers have to the people using what they create. He highlights how often people blame themselves when they struggle with technology, rather than questioning the systems they are expected to navigate.  When a design isn't intuitive or accessible, it can become a barrier to communication. In contrast, Laurel Schwulst's *"My Website Is a Shifting House Next to a River of Knowledge. What Could Yours Be?"* considers the potential of digital spaces as places for creativity, exploration and personal expression, reminding us that websites can be more than tools for getting things done.</p>
+			<p>Together, these readings challenge the idea that visual appeal and functionality have to compete. Coming from a visual arts background, it's natural to be drawn to the expressive side of design, but these perspectives also highlight the importance of clarity, accessibility and the people behind every interaction. Not everything needs to be visually immersive, and sometimes simplicity is what makes an experience successful. At the same time, functionality doesn't have to mean sacrificing creativity or character.</p>
+			<p>Ultimately, this publication considers how design can be both engaging and useful: creating experiences that invite people in, help them find their way and make them feel considered along the way.</p>
+
+			<ul>
+				<li>
+					<a href="article-1/">
+						<h3>Tension</h3>
+						<p>Hooked on a Feeling</p>
+						<p>By Michael Rock</p>
+					</a>
+				</li>
+				<li>
+					<a href="article-2/">
+						<h3>Responsibility</h3>
+						<p>A Software Design Manifesto</p>
+						<p>By Mitchell Kapor</p>
+					</a>
+				</li>
+				<li>
+					<a href="article-3/">
+						<h3>Possibility</h3>
+						<p>My Website is a Shifting House Next to a River of Knowledge. What Could Yours Be?</p>
+						<p>By Laurel Schwulst</p>
+					</a>
+				</li>
+			</ul>
+		</main>
 
 		<footer><!--artistic footer, can reduce amount, not responsive-->
-			<p> Made by Simrin Rajani</p>
+			<img src="images/form-function.png" alt="">
+			<p>Type &amp; Interaction 2026-2027<br>Semester 1<br>Project 3<br>Binding</p>
+			<p> Simrin<br>Rajani</p>
 		</footer>
-		</main>
 	</body>
 </html>
